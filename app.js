@@ -28,3 +28,62 @@ function renderMenu(bool) {
 }
 
 menuBtn.addEventListener("click", toggleMenu);
+
+/*========================================
+--> HOMEPAGE CHANGES
+========================================*/
+
+const bullets = document.querySelectorAll(".bullet");
+const bulletPoints = document.querySelectorAll(".bullet__point");
+const wraps = document.querySelectorAll(".wrap");
+let indexGlobal = 0;
+
+function changeHome(e) {
+  // Get the number from the clicked bullet element
+  if (e.target.tagName == "SPAN") {
+    indexGlobal = parseInt(e.target.parentElement.innerHTML.slice(1, 2));
+  } else {
+    indexGlobal = parseInt(e.target.innerHTML.slice(1, 2));
+  }
+  indexGlobal -= 1; // Because index starts with 0
+  // Changes the bullet fill
+  changeBullets(indexGlobal);
+  // Changes the background
+  changeBackground(indexGlobal);
+}
+
+function changeBullets(index) {
+  for (let i = 0; i < bulletPoints.length; i++) {
+    bulletPoints[i].classList.remove("bullet__point--filled");
+  }
+  bulletPoints[index].classList.add("bullet__point--filled");
+}
+
+function changeBackground(index) {
+  wraps[index].style.transition = `opacity .8s ease-out`;
+  for (let i = 0; i < wraps.length; i++) {
+    wraps[i].style.zIndex = "0";
+    wraps[i].style.opacity = ".5";
+  }
+  wraps[index].style.zIndex = "5";
+  wraps[index].style.opacity = "1";
+}
+
+for (let i = 0; i < bullets.length; i++) {
+  // Must check if bullets exist, then add event listener
+  if (bullets[i]) {
+    bullets[i].addEventListener("click", changeHome);
+  }
+}
+
+// Will it break the code on pages other than homepage?
+let bulletsLength = bullets.length;
+setInterval(function() {
+  if (indexGlobal < bulletsLength - 1) {
+    indexGlobal += 1;
+  } else {
+    indexGlobal = 0;
+  }
+  changeBullets(indexGlobal);
+  changeBackground(indexGlobal);
+}, 4000);

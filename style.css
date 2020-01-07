@@ -6,9 +6,9 @@
   /* Font */
   --font-base: "Open Sans", sans-serif;
   /* Color */
-  --color-photo: 148, 87, 68;
-  --color-dev: 42, 47, 65;
-  --color-art: 188, 76, 34;
+  --c-photo: 148, 87, 68;
+  --c-dev: 42, 47, 65;
+  --c-art: 188, 76, 34;
 
   --container-padding-s: 20px;
   --container-padding-l: 100px;
@@ -190,15 +190,19 @@ header {
 }
 .wrap.photo {
   z-index: 5;
-  background: rgb(var(--color-photo));
+  opacity: 1;
+  background: rgb(var(--c-photo));
 }
 .wrap.dev {
   z-index: 1;
-  background: rgb(var(--color-dev));
+  opacity: 0.5;
+
+  background: rgb(var(--c-dev));
 }
 .wrap.art {
   z-index: 1;
-  background: rgb(var(--color-art));
+  opacity: 0.5;
+  background: rgb(var(--c-art));
 }
 
 /*========================================
