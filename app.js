@@ -91,3 +91,51 @@ if (bullets[0]) {
     changeBackground(indexGlobal);
   }, 4000);
 }
+
+/*========================================
+--> GALLERY
+========================================*/
+
+const gallery = document.querySelector(".gallery__images");
+const modal = document.querySelector(".modal");
+
+// Opens up the modal window
+function showImage(e) {
+  let srcAttr = e.target.getAttribute("src");
+  let newSrcAttr = srcAttr.replace("t-", "");
+  newSrcAttr = newSrcAttr.replace("png", "jpg");
+  buildModalHTML(newSrcAttr);
+}
+
+// Building the content of the modal based on the clicked thumbnail img
+function buildModalHTML(srcAttr) {
+  let modalHTML = `
+    <div class="shadow">
+      <div class="modal-image">
+        <img src="${srcAttr}" alt="thumbnail of a misty forest" />
+      </div>
+      <p class="modal-close">Close Image</p>
+    </div>
+  `;
+  modal.innerHTML = modalHTML;
+}
+
+// Closes the modal element by clearing its content
+function closeModal() {
+  modal.innerHTML = "";
+}
+
+// Clicking a thumbnail img will open up a modal with the clicked img
+// Must check if gallery exists, so code won't break on other pages
+if (gallery) {
+  gallery.addEventListener("click", showImage);
+}
+
+// Clicking anywhere on the modal or pressing any keys will close the modal
+// Must check if modal exists, so code won't break on other pages
+if (modal) {
+  modal.addEventListener("click", closeModal);
+  document.onkeydown = function() {
+    closeModal();
+  };
+}
