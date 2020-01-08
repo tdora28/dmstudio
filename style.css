@@ -115,6 +115,11 @@ header {
   }
 }
 
+.logo,
+.menuBtn {
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.35);
+}
+
 .menuBtn {
   color: #fff;
 }
@@ -302,4 +307,172 @@ header {
 }
 .avatar:hover .avatar__img-right {
   transform: translateY(0);
+}
+
+/*========================================
+--> BIO PAGES (photo.html, dev.html, art.html)
+========================================*/
+
+/*========================================
+--> JUMBO
+========================================*/
+
+.jumbo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 230px;
+  padding-top: var(--nav__bar-height);
+  padding-right: var(--container-padding-s);
+  padding-bottom: var(--nav__bar-height);
+  padding-left: var(--container-padding-s);
+  color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.35);
+}
+.jumbo.photo-a {
+  background-image: url("img/photo/jumbo-photo.jpg");
+  box-shadow: inset 0 0 0 1000px rgba(148, 87, 68, 0.7);
+}
+.jumbo h1 {
+  font-size: 30px;
+}
+.jumbo h2 {
+  font-size: 20px;
+}
+@media (min-width: 1000px) {
+  .jumbo {
+    height: 350px;
+    padding-right: var(--container-padding-l);
+    padding-left: var(--container-padding-l);
+  }
+  .jumbo h1 {
+    font-size: 60px;
+  }
+  .jumbo h2 {
+    font-size: 30px;
+  }
+}
+
+/*========================================
+--> ABOUT and GALLERY
+========================================*/
+
+.title {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.title.photo-a {
+  color: rgba(var(--c-photo));
+}
+
+.text {
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+/*========================================
+--> ABOUT
+========================================*/
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-right: var(--container-padding-s);
+  padding-bottom: 50px;
+  padding-left: var(--container-padding-s);
+}
+@media (min-width: 1000px) {
+  .about {
+    flex-direction: row;
+    padding-right: var(--container-padding-l);
+    padding-left: var(--container-padding-l);
+  }
+  .about__article {
+    margin-right: 50px;
+  }
+}
+
+.about__photo {
+  width: 100%;
+  max-width: 350px;
+  margin-top: 34px;
+}
+@media (min-width: 1000px) {
+  .about__photo {
+    margin-top: 0;
+  }
+}
+
+/*========================================
+--> GALLERY
+========================================*/
+
+.gallery {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-right: var(--container-padding-s);
+  padding-bottom: 50px;
+  padding-left: var(--container-padding-s);
+}
+@media (min-width: 1000px) {
+  .gallery {
+    grid-template-areas: "images article";
+    padding-right: var(--container-padding-l);
+    padding-left: var(--container-padding-l);
+  }
+  .gallery__article {
+    grid-area: article;
+    margin-left: 50px;
+  }
+}
+
+.gallery__images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 150px));
+  justify-content: center;
+  width: 100%;
+  margin-top: 34px;
+}
+@media (min-width: 640px) {
+  .gallery__images {
+    max-width: 450px;
+  }
+}
+@media (min-width: 1000px) {
+  .gallery__images {
+    grid-area: images;
+    margin-top: 0;
+  }
+}
+
+/*========================================
+--> FOOTER
+========================================*/
+
+.footer {
+  text-align: center;
+  margin-right: var(--container-padding-s);
+  margin-left: var(--container-padding-s);
+  padding: 30px;
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+@media (min-width: 1000px) {
+  .footer {
+    margin-right: var(--container-padding-l);
+    margin-left: var(--container-padding-l);
+  }
+}
+.footer.photo-f {
+  border-top-color: rgb(var(--c-photo));
 }

@@ -69,21 +69,25 @@ function changeBackground(index) {
   wraps[index].style.opacity = "1";
 }
 
+// Event listener for clicking the bullets
 for (let i = 0; i < bullets.length; i++) {
-  // Must check if bullets exist, then add event listener
+  // Must check if bullets exist, so code won't break on other pages
   if (bullets[i]) {
     bullets[i].addEventListener("click", changeHome);
   }
 }
 
-// Will it break the code on pages other than homepage?
+// Changing background automatically
 let bulletsLength = bullets.length;
-setInterval(function() {
-  if (indexGlobal < bulletsLength - 1) {
-    indexGlobal += 1;
-  } else {
-    indexGlobal = 0;
-  }
-  changeBullets(indexGlobal);
-  changeBackground(indexGlobal);
-}, 4000);
+// Must check if bullets exist, so code won't break on other pages
+if (bullets[0]) {
+  setInterval(function() {
+    if (indexGlobal < bulletsLength - 1) {
+      indexGlobal += 1;
+    } else {
+      indexGlobal = 0;
+    }
+    changeBullets(indexGlobal);
+    changeBackground(indexGlobal);
+  }, 4000);
+}
