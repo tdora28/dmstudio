@@ -338,6 +338,14 @@ header {
   background-image: url("img/photo/jumbo-photo.jpg");
   box-shadow: inset 0 0 0 1000px rgba(148, 87, 68, 0.7);
 }
+.jumbo.dev-a {
+  background-image: url("img/dev/jumbo-dev.jpg");
+  box-shadow: inset 0 0 0 1000px rgba(42, 47, 65, 0.7);
+}
+.jumbo.art-a {
+  background-image: url("img/art/jumbo-art.jpg");
+  box-shadow: inset 0 0 0 1000px rgba(188, 76, 34, 0.7);
+}
 .jumbo h1 {
   font-size: 30px;
 }
@@ -369,6 +377,12 @@ header {
 }
 .title.photo-a {
   color: rgba(var(--c-photo));
+}
+.title.dev-a {
+  color: rgba(var(--c-dev));
+}
+.title.art-a {
+  color: rgba(var(--c-art));
 }
 
 .text {
@@ -516,4 +530,10 @@ header {
 }
 .footer.photo-f {
   border-top-color: rgb(var(--c-photo));
+}
+.footer.dev-f {
+  border-top-color: rgb(var(--c-dev));
+}
+.footer.art-f {
+  border-top-color: rgb(var(--c-art));
 }

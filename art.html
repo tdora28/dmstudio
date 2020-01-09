@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DM Studio</title>
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+  </head>
+  <body>
+    <header>
+      <!-- NAVIGATION -->
+      <nav class="nav">
+        <div class="nav__bar">
+          <a class="logo" href="index.html" tabindex="1" aria-label="back to home page">DM Studio</a>
+          <button class="menuBtn openMenu" tabindex="-1">Menu</button>
+        </div>
+        <div class="menu">
+          <div class="menu__item">
+            <h4>Contact</h4>
+            <p tabindex="2">dmstudio@blabla.bla</p>
+          </div>
+          <div class="menu__item">
+            <h4>Social</h4>
+            <a href="https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q/featured" target="_blank" rel="noopener noreferrer" tabindex="3" aria-label="open youtube page"><img src="img/youtube.svg"/></a>
+            <a href="https://twitter.com/developedbyed/" target="_blank" rel="noopener noreferrer" tabindex="4" aria-label="open twitter page"><img src="img/twitter.svg"/></a>
+            <a href="https://www.instagram.com/developedbyed/" target="_blank" rel="noopener noreferrer" tabindex="5" aria-label="open instagram page"><img src="img/instagram.svg"/></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- JUMBO -->
+      <div class="jumbo art-a">
+        <h1>Gredrir Pazescu</h1>
+        <h2>artist</h2>
+      </div>
+
+      <!-- ABOUT -->
+      <article class="about">
+        <div class="about__article">
+          <h3 class="title art-a">About Gredrir</h3>
+          <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo, nulla eu facilisis maximus, felis lorem sodales urna, quis bibendum velit nulla sit amet magna. Sed rhoncus vehicula ante quis rutrum. Proin cursus, lorem at euismod dictum, sem velit pretium purus, sed egestas nisi diam in tellus. Vivamus volutpat libero ut tellus mollis, eu ornare nibh efficitur. Morbi tincidunt ultricies dui, ac dignissim metus porttitor non. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ac mollis diam, at tempus lacus. Integer tincidunt, lacus vitae feugiat commodo, ante ipsum tristique velit, at ultricies est tortor vel erat.</p>
+          <p class="text">In odio dolor, commodo sed porta sed, porttitor sit amet dolor. Sed pellentesque lacus quis justo vehicula vulputate. Nulla convallis ornare magna vehicula semper. Nam et lectus est. Sed ipsum ex, porttitor ac orci sed, bibendum placerat dolor. Maecenas tempus sagittis porta. Donec velit enim, faucibus ut tempus in, molestie sed neque. Aenean sit amet erat orci.</p>
+        </div>
+        <img class="about__photo" src="img/art/img-art.png" alt="photo of Gredrir Pazescu" />
+      </article>
+
+      <!-- GALLERY -->
+      <section class="gallery">
+        <div class="gallery__article">
+          <h3 class="title art-a">Gallery</h3>
+          <p class="text">Nulla condimentum libero quis neque elementum blandit. Sed ut ullamcorper sem. Aliquam erat volutpat. Donec ac elit mauris. Praesent tellus libero, sagittis quis lobortis vitae, dictum interdum massa. Phasellus interdum maximus justo et placerat.</p>
+        </div>
+        <div class="gallery__images">
+          <img class="gallery__img" src="img/art/t-art1.png" alt="thumbnail of a colorful mosaic wall" />
+          <img class="gallery__img" src="img/art/t-art2.png" alt="thumbnail of a colorful brick wall" />
+          <img class="gallery__img" src="img/art/t-art3.png" alt="thumbnail of a graffity depicting a woman with sunglasses" />
+          <img class="gallery__img" src="img/art/t-art4.png" alt="thumbnail of color explosion" />
+          <img class="gallery__img" src="img/art/t-art5.png" alt="thumbnail of a graffity depicting two children riding a bicycle" />
+          <img class="gallery__img" src="img/art/t-art6.png" alt="thumbnail of a woman's face colorfully painted" />
+        </div>
+      </section>
+
+      <!-- IMAGE MODAL -->
+      <div class="modal"></div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer art-f">
+      <small>Check out the real <a href="https://youtu.be/wmEc9HeQV7Q" target="_blank" rel="noopener noreferrer">DM Studio</a>&trade; and <a href="https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q" target="_blank" rel="noopener noreferrer">Dev Ed's channel</a>!</small>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="app.js"></script>
+  </body>
+</html>
